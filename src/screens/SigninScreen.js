@@ -25,7 +25,7 @@ const SigninScreen = () => {
 
 SigninScreen.navigationOptions = () => {
   return {
-    headerShown: true,
+    headerShown: false,
   };
 };
 
