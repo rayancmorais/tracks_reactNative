@@ -62,6 +62,8 @@ cd tracks_reactNative
 # Install client dependencies
 npm install # or yarn install
 
+```
+
 ## 2. Set Up the Backend
 
 The mobile client needs a running, publicly accessible backend to connect to for authentication and data management.
