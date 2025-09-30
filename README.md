@@ -96,3 +96,8 @@ Start the Expo development server:
 
 ```bash
 npm start # or yarn start
+
+1.  A **QR code** will appear in your terminal.
+2.  Open the **Expo Go** app on your phone and scan the QR code to load the application.
+3.  Alternatively, press `a` for Android emulator or `i` for iOS simulator.
+
