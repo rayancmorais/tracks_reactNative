@@ -1,67 +1,63 @@
-# tracks_reactNative
+# 📍 Tracks: Real-Time Location Tracking App
 
-An app that uses maps to track the user's location. This project is built with React Native and features secure user authentication with a Node.js backend.
-
----
-
-### Features
-
-* **Location Tracking:** Actively tracks and displays the user's current location on a map.
-* **Secure User Authentication:** Implements a signup and signin flow with password hashing and salting for security.
-* **Map View:** Provides a clear, interactive map interface powered by `react-native-maps`.
-* **User Interface:** A simple and intuitive UI built with React Native components.
+A full-stack, cross-platform mobile application for tracking and logging user movement, built with **React Native** and a secure **Node.js/MongoDB** backend.
 
 ---
 
-### Technologies Used
+## ✨ Features
 
-* **React Native:** The framework for building the mobile application.
-* **React Navigation:** Handles navigation between different screens of the app.
-* **React Native Maps:** A component library to integrate map views and markers.
-* **MongoDB Atlas:** A cloud-based database for storing user information and tracks.
-* **Node.js & Express:** Used to create the backend API for handling data and authentication.
-* **Ngrok:** Exposes the local backend server to the internet for development and testing.
-* **Password Hashing Library (e.g., bcrypt):** Used to securely hash and salt user passwords.
-* **`@expo/vector-icons`:** Provides a set of vector icons for the UI.
+| Icon | Feature | Description |
+| :---: | :--- | :--- |
+| 🗺️ | **Live Location Tracking** | Actively tracks and displays the user's current location on an interactive map in real-time. |
+| 🔐 | **Secure User Authentication** | Full signup and signin flow featuring robust password hashing and salting (using `bcrypt`). |
+| 💾 | **Track Persistence** | Allows users to save their recorded tracks and view them later. |
+| 🧭 | **Intuitive Navigation** | Clean, user-friendly interface powered by **React Navigation**. |
+| 📱 | **Cross-Platform** | Built with React Native for deployment on both iOS and Android devices via Expo. |
 
 ---
 
-### Getting Started
+## 🚀 Technical Stack
 
-To get a copy of the project up and running on your local machine, follow these steps.
+This project is divided into two parts: the mobile client (in this repository) and a companion Node/Express backend.
 
-#### Prerequisites
+### Client (Mobile App)
 
-* Node.js (LTS version recommended)
-* npm or yarn
-* A mobile device or an emulator with Android/iOS
-* An Ngrok account and the Ngrok CLI installed
+| Component | Technology | Role |
+| :--- | :--- | :--- |
+| **Framework** | **React Native** | Building cross-platform mobile UIs. |
+| **Navigation** | **React Navigation** | Handling app routing and screen management. |
+| **Mapping** | **`react-native-maps`** | Providing a clear, interactive map interface. |
+| **Icons** | **`@expo/vector-icons`** | High-quality vector icons for the UI. |
 
-#### Installation
+### Server (API & Database)
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/rayancmorais/tracks_reactNative.git](https://github.com/rayancmorais/tracks_reactNative.git)
-    cd tracks_reactNative
-    ```
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
-3.  **Set up the backend:**
-    * Navigate to the `tracks-server` directory within this project.
-    * Start the Node.js server.
-    * In a separate terminal, use Ngrok to expose your local server to the public internet. This will generate a unique HTTPS forwarding URL.
-    * Update the `API_URL` variable in the React Native project to this new Ngrok URL.
+| Component | Technology | Role |
+| :--- | :--- | :--- |
+| **Server** | **Node.js & Express** | The backend API for handling requests and authentication. |
+| **Database** | **MongoDB Atlas** | Cloud-hosted NoSQL database for storing user accounts and track data. |
+| **Security** | **Password Hashing Library (e.g., `bcrypt`)** | Securely hashing and salting user passwords. |
 
-4.  **Run the app:**
-    Start the development server.
-    ```bash
-    npm start
-    # or
-    yarn start
-    ```
-    * Scan the QR code displayed in the terminal with the Expo Go app on your phone.
-    * Alternatively, press `a` for Android emulator or `i` for iOS simulator.
+---
+
+## ⚙️ Getting Started
+
+Follow these steps to set up the project on your local machine for development and testing.
+
+### Prerequisites
+
+* **Node.js** (LTS version recommended)
+* **npm** or **yarn**
+* **Expo Go** app installed on your mobile device (or a working emulator/simulator)
+* **Ngrok** CLI installed and an account for exposing your local backend server.
+
+### 1. Clone the Repositories
+
+This project requires both the client and its server. Assuming the server code is in a dedicated folder (e.g., `tracks-server`).
+
+```bash
+# Clone the client (this repository)
+git clone [https://github.com/rayancmorais/tracks_reactNative.git](https://github.com/rayancmorais/tracks_reactNative.git)
+cd tracks_reactNative
+
+# Install client dependencies
+npm install # or yarn install
