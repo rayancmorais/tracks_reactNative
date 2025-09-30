@@ -61,3 +61,38 @@ cd tracks_reactNative
 
 # Install client dependencies
 npm install # or yarn install
+
+## 2. Set Up the Backend
+
+The mobile client needs a running, publicly accessible backend to connect to for authentication and data management.
+
+1.  **Navigate to your server directory** (e.g., `tracks-server`).
+2.  **Start the Node.js server:**
+    ```bash
+    npm start # or node index.js
+    ```
+3.  **Expose the server using Ngrok:** In a new terminal window, run Ngrok, specifying the port your Node.js server is running on (e.g., port 3000):
+    ```bash
+    ngrok http 3000
+    ```
+    This will generate a unique HTTPS forwarding URL (e.g., `https://abcdef12345.ngrok.io`). **This is your `API_URL`**.
+
+## 3. Configure the Mobile Client
+
+1.  In the client repository (`tracks_reactNative`), locate where the API URL is defined (e.g., in a file like `src/api/tracker.js`).
+2.  **Update the `API_URL`** to the HTTPS URL provided by Ngrok.
+
+    ```javascript
+    // Example: src/api/tracker.js
+    // Change this base URL every time you restart your Ngrok session!
+    const instance = axios.create({
+      baseURL: 'YOUR_NGROK_HTTPS_URL_HERE' 
+    });
+    ```
+
+## 4. Run the Mobile App
+
+Start the Expo development server:
+
+```bash
+npm start # or yarn start
